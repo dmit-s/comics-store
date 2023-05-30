@@ -1,0 +1,97 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: var(--clr-text);
+}
+
+input, button{
+    outline: none;
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font-family: 'Open Sans', sans-serif;
+    --fw-normal: 400;
+    --fw-light: 300;
+    --fw-bold: 700;
+    --fs-normal: 16px;
+    --fs-small: 14px;
+    --fs-very-small: 12px;
+    --gradient: linear-gradient(326deg, rgba(246,51,51,1) 0%, rgba(86,23,126,1) 100%);
+    --clr-text: #0e1420;
+    --clr-bg: #f8f8f8;
+    --clr-dark: #3d3d3d;
+    --clr-white: #f0f0f0;
+    --clr-blue: #3f3eff; 
+    --clr-blue-light: #cddeff;
+    --clr-green: #00a900;
+    --clr-red: #ff2828;
+    --clr-purple: #ae1ae2;  
+    --clr-purple-light: #e9c5ff;   
+    --clr-gray: #bbbbbb;
+    --clr-gray-light: #e2e2e2;
+}
+
+
+html{
+    font-size: var(--fs-very-small);
+
+    @media(min-width: 300px) {
+        font-size: var(--fs-small);
+    }
+    
+    @media(min-width: 1024px) {
+        font-size: var(--fs-normal);
+    }
+}
+
+body{
+    position: relative;
+    margin: 0;
+    color: var(--clr-text);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: var(--fw-normal);
+    background-color: var(--clr-bg);
+    position: relative;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+main{
+    flex: 1 1 auto;
+    padding: 4rem 0;
+}
